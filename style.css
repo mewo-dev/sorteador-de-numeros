@@ -1,0 +1,149 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0f1a;
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ===== App Container ===== */
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, #0b0f1a, #121826);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px #00ffff22;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ===== Sorteador Card ===== */
+.card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.title span {
+  color: #00ffff;
+}
+
+/* ===== Formulário ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #aaa;
+}
+
+input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e2533;
+  color: #00ffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="button"]:first-child {
+  background-color: #00ffff;
+  color: #000;
+}
+
+button[type="button"]:first-child:hover {
+  background-color: #00dddd;
+}
+
+button:disabled {
+  background-color: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* ===== Resultado ===== */
+.result p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+.result span {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+/* ===== Ilustração ===== */
+.illustration {
+  background-color: #10131f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px #00ffff33);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 800px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .illustration {
+    display: none;
+  }
+}
